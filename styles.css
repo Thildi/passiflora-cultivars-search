@@ -83,29 +83,32 @@ h1 {
     width: 90%; /* Breite der Eingabefelder und Buttons anpassen */
     margin-bottom: 10px; /* Abstand zwischen den Elementen */
   }
-
   .result-table thead {
-    display: none; /* Tabelle Kopf ausblenden */
+    display: none; /* Kopf der Tabelle ausblenden */
   }
 
-  .result-table th,
+  .result-table tr {
+    display: block; /* Jede Tabellenzeile als Block darstellen */
+    margin-bottom: 20px; /* Abstand zwischen den Ergebnissen */
+  }
+
   .result-table td {
-    display: block; /* Zellen als Block anzeigen */
-    text-align: right; /* Text nach rechts ausrichten */
-    position: relative; /* Positionieren der Zellen */
-    padding-left: 50%; /* Abstand links hinzufügen */
+    display: block;
+    text-align: left;
+    padding: 8px;
+    position: relative;
+    border-color: rgba(0, 0, 0, 0.671);
   }
 
-  .result-table th::before,
   .result-table td::before {
-    content: attr(data-label); /* Label für die Zellen anzeigen */
-    position: absolute; /* Absolute Positionierung */
-    left: 10px; /* Abstand links */
-    width: calc(50% - 20px); /* Breite der Labels */
-    padding-right: 10px; /* Abstand rechts */
-    white-space: nowrap; /* Zeilenumbruch verhindern */
-    text-align: left; /* Text links ausrichten */
-    font-weight: bold; /* Fettdruck */
+    content: attr(data-label); /* Setzt den Kategorie-Namen vor den Wert */
+    font-weight: bold; /* Kategorie-Namen fett anzeigen */
+    display: block;
+    margin-bottom: 5px; /* Abstand zwischen dem Label und dem Wert */
+  }
+
+  .result-table tr:last-child {
+    margin-bottom: 40px; /* Abstand nach dem letzten Eintrag */
   }
 }
 
