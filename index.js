@@ -118,9 +118,9 @@ function displayResults(results) {
     results.forEach((cultivar) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td data-label="Cultivar Name">${capitalizeWords(
+      <td data-label="Cultivar Name">'${capitalizeWords(
         cultivar["Cultivar Name"]
-      )}</td>
+      )}'</td>
       <td data-label="Female Parent">${cultivar["Female Parent"]}</td>
       <td data-label="Male Parent">${cultivar["Male Parent"]}</td>
       <td data-label="Breeder">${capitalizeWords(cultivar["Breeder"])}</td>
