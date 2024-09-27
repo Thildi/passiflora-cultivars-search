@@ -29,5 +29,5 @@ The application displays the results in a clear, tabular format, showing all rel
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/passion-flower-cultivar-search.git
+   git clone https://github.com/Thildi/passiflora-cultivars-search.git
    ```
