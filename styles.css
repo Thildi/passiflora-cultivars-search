@@ -31,11 +31,12 @@ header {
   padding: 10px 0;
   background-color: #ffffff; /* Optional: Hintergrundfarbe des Headers */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: leichte Schattierung */
+  opacity: 0.85;
 }
 
 .logo {
   max-height: 130px; /* Begrenzung der Höhe des Logos */
-  margin-right: 100px;
+  margin-right: 98px;
   width: auto;
 }
 
