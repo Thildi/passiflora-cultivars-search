@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a web application that allows users to search for cultivars of passion flowers. Users can search by various attributes, including:
+This project is a web application that allows users to search for cultivated varieties of passion flowers. Users can search by various attributes, including:
 
 - Cultivar Name
 - Female Parent
