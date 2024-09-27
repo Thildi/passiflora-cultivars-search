@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Bahnschrift", sans-serif;
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
@@ -8,6 +8,20 @@ body {
   background-position: center; /* Bild wird zentriert */
   background-repeat: no-repeat; /* Verhindert die Wiederholung des Bildes */
   background-attachment: fixed; /* Bild bleibt fest, wenn die Seite gescrollt wird */
+}
+
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("fonts/Bahnschrift.ttf") format("truetype"); /* Pfad zur Schriftartdatei */
+  font-weight: normal; /* oder bold */
+  font-style: normal; /* oder italic */
+}
+
+input,
+button {
+  font-family: "Bahnschrift", sans-serif; /* Fallback auf eine andere Schriftart */
+  padding: 10px; /* Beispiel für Padding */
+  font-size: 16px; /* Beispiel für Schriftgröße */
 }
 
 header {
@@ -20,8 +34,8 @@ header {
 }
 
 .logo {
-  max-height: 180px; /* Begrenzung der Höhe des Logos */
-  margin-right: 160px;
+  max-height: 130px; /* Begrenzung der Höhe des Logos */
+  margin-right: 100px;
   width: auto;
 }
 
@@ -34,6 +48,7 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1 {
+  font-size: 40px;
   text-align: center;
   color: #00a2ff;
 }
