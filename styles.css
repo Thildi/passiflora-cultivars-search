@@ -3,6 +3,25 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  background-image: url("./assets/images/Chinensis-BG-Transpa.png");
+  background-size: cover; /* Bild wird skaliert, um den ganzen Bildschirm abzudecken */
+  background-position: center; /* Bild wird zentriert */
+  background-repeat: no-repeat; /* Verhindert die Wiederholung des Bildes */
+  background-attachment: fixed; /* Bild bleibt fest, wenn die Seite gescrollt wird */
+}
+
+header {
+  display: flex;
+  justify-content: center; /* Zentriert das Logo horizontal */
+  align-items: center;
+  padding: 10px 0;
+  background-color: #ffffff; /* Optional: Hintergrundfarbe des Headers */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: leichte Schattierung */
+}
+
+.logo {
+  max-height: 180px; /* Begrenzung der Höhe des Logos */
+  width: auto;
 }
 
 .container {
@@ -15,7 +34,7 @@ body {
 }
 h1 {
   text-align: center;
-  color: #333;
+  color: #00a2ff;
 }
 
 .search-fields {
@@ -73,6 +92,14 @@ h1 {
 
 /* Media Queries für kleinere Bildschirme */
 @media (max-width: 768px) {
+  header {
+    padding: 15px 0;
+  }
+
+  .logo {
+    max-height: 60px; /* Kleinere Höhe für Mobilgeräte */
+  }
+
   .search-fields {
     flex-direction: column; /* Vertikale Anordnung der Suchfelder */
     align-items: center; /* Zentriert die Suchfelder */
