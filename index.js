@@ -21,25 +21,38 @@ async function loadCultivars() {
 }
 
 // Funktion für die Suche von Cultivars basierend auf den Eingabefeldern
+
 function searchCultivars() {
-  // Werte der Eingabefelder abrufen und in Kleinbuchstaben umwandeln
-  const name = document.getElementById("cultivar-name").value.toLowerCase();
+  // Bereinigen der Eingaben: Entfernen von führenden und nachfolgenden Leerzeichen und Umwandeln in Kleinbuchstaben
+  const name = document
+    .getElementById("cultivar-name")
+    .value.trim()
+    .toLowerCase(); // .trim() entfernt Leerzeichen
   const femaleParent = document
     .getElementById("female-parent")
-    .value.toLowerCase();
-  const maleParent = document.getElementById("male-parent").value.toLowerCase();
-  const breeder = document.getElementById("breeder").value.toLowerCase();
-  const year = document.getElementById("year").value;
+    .value.trim()
+    .toLowerCase(); // .trim() entfernt Leerzeichen
+  const maleParent = document
+    .getElementById("male-parent")
+    .value.trim()
+    .toLowerCase(); // .trim() entfernt Leerzeichen
+  const breeder = document.getElementById("breeder").value.trim().toLowerCase(); // .trim() entfernt Leerzeichen
+  const year = document.getElementById("year").value.trim(); // .trim() entfernt Leerzeichen
 
-  // Filtert die cultivars basierend auf den eingegebenen Werten
+  // Filtert die Cultivars basierend auf den eingegebenen Werten
   const results = cultivars.filter((cultivar) => {
     return (
+      // Überprüft, ob der eingegebene Name übereinstimmt oder leer ist
       (name === "" || cultivar["Cultivar Name"].toLowerCase().includes(name)) &&
+      // Überprüft, ob der eingegebene Female Parent übereinstimmt oder leer ist
       (femaleParent === "" ||
         cultivar["Female Parent"].toLowerCase().includes(femaleParent)) &&
+      // Überprüft, ob der eingegebene Male Parent übereinstimmt oder leer ist
       (maleParent === "" ||
         cultivar["Male Parent"].toLowerCase().includes(maleParent)) &&
+      // Überprüft, ob der eingegebene Breeder übereinstimmt oder leer ist
       (breeder === "" || cultivar["Breeder"].toLowerCase().includes(breeder)) &&
+      // Überprüft, ob das eingegebene Jahr übereinstimmt oder leer ist
       (year === "" ||
         (cultivar["Year"] && cultivar["Year"].toString() === year))
     );
