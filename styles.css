@@ -21,6 +21,7 @@ header {
 
 .logo {
   max-height: 180px; /* Begrenzung der Höhe des Logos */
+  margin-right: 160px;
   width: auto;
 }
 
