@@ -70,3 +70,53 @@ h1 {
 .result-table th {
   background-color: #f2f2f2;
 }
+
+/* Media Queries für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .search-fields {
+    flex-direction: column; /* Vertikale Anordnung der Suchfelder */
+    align-items: center; /* Zentriert die Suchfelder */
+  }
+
+  .search-fields input,
+  .search-fields button {
+    width: 90%; /* Breite der Eingabefelder und Buttons anpassen */
+    margin-bottom: 10px; /* Abstand zwischen den Elementen */
+  }
+
+  .result-table thead {
+    display: none; /* Tabelle Kopf ausblenden */
+  }
+
+  .result-table th,
+  .result-table td {
+    display: block; /* Zellen als Block anzeigen */
+    text-align: right; /* Text nach rechts ausrichten */
+    position: relative; /* Positionieren der Zellen */
+    padding-left: 50%; /* Abstand links hinzufügen */
+  }
+
+  .result-table th::before,
+  .result-table td::before {
+    content: attr(data-label); /* Label für die Zellen anzeigen */
+    position: absolute; /* Absolute Positionierung */
+    left: 10px; /* Abstand links */
+    width: calc(50% - 20px); /* Breite der Labels */
+    padding-right: 10px; /* Abstand rechts */
+    white-space: nowrap; /* Zeilenumbruch verhindern */
+    text-align: left; /* Text links ausrichten */
+    font-weight: bold; /* Fettdruck */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-fields input,
+  .search-fields button {
+    width: 100%; /* Auf sehr kleinen Bildschirmen volle Breite */
+  }
+
+  .result-table th,
+  .result-table td {
+    padding: 8px; /* Padding für kleinere Bildschirme anpassen */
+  }
+}

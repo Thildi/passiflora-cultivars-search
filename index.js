@@ -105,11 +105,15 @@ function displayResults(results) {
     results.forEach((cultivar) => {
       const row = document.createElement("tr");
       row.innerHTML = `
-      <td>'${capitalizeWords(cultivar["Cultivar Name"])}'</td>
-      <td>${cultivar["Female Parent"]}</td>
-      <td>${cultivar["Male Parent"]}</td>
-      <td>${capitalizeWords(cultivar["Breeder"])}</td>
-      <td>${cultivar["Year"] !== null ? cultivar["Year"] : "N/A"}</td>
+      <td data-label="Cultivar Name">${capitalizeWords(
+        cultivar["Cultivar Name"]
+      )}</td>
+      <td data-label="Female Parent">${cultivar["Female Parent"]}</td>
+      <td data-label="Male Parent">${cultivar["Male Parent"]}</td>
+      <td data-label="Breeder">${capitalizeWords(cultivar["Breeder"])}</td>
+      <td data-label="Year">${
+        cultivar["Year"] !== null ? cultivar["Year"] : "N/A"
+      }</td>
   `;
       tbody.appendChild(row); // Zeile zum Körper der Tabelle hinzufügen
     });
