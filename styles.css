@@ -48,6 +48,7 @@ header {
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
   font-size: 40px;
   text-align: center;
@@ -108,6 +109,24 @@ h1 {
 .result-table th {
   background-color: #f2f2f2;
 }
+#back-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 200px;
+  z-index: 100; /* Damit es über anderen Elementen angezeigt wird */
+  background-color: #00a2ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: none; /* Der Button wird anfangs versteckt */
+}
+
+#back-to-top-btn:hover {
+  background-color: #5cb85c; /* Ändere die Farbe, wenn der Button schwebt */
+}
 
 /* Media Queries für kleinere Bildschirme */
 @media (max-width: 768px) {
@@ -156,6 +175,21 @@ h1 {
 
   .result-table tr:last-child {
     margin-bottom: 40px; /* Abstand nach dem letzten Eintrag */
+  }
+
+  #back-to-top-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 17px;
+    z-index: 100; /* Damit es über anderen Elementen angezeigt wird */
+    background-color: #00a2ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 17px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none; /* Der Button wird anfangs versteckt */
   }
 }
 

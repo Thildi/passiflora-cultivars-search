@@ -146,6 +146,25 @@ function resetSearch() {
   document.getElementById("year").value = "";
   document.getElementById("results").innerHTML = ""; // Ergebnisse zurücksetzen
 }
+// Der Button wird angezeigt, wenn der Benutzer nach unten scrollt
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  var backToTopBtn = document.getElementById("back-to-top-btn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    backToTopBtn.style.display = "block"; // Button sichtbar machen
+  } else {
+    backToTopBtn.style.display = "none"; // Button verstecken
+  }
+}
+
+// Scrollt die Seite nach oben, wenn der Button geklickt wird
+document.getElementById("back-to-top-btn").onclick = function () {
+  document.body.scrollTop = 0; // Für Safari
+  document.documentElement.scrollTop = 0; // Für Chrome, Firefox, IE und Opera
+};
 
 // Event Listener für die Buttons
 document
