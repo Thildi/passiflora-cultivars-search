@@ -62,11 +62,18 @@ function searchCultivars() {
   displayResults(results);
 }
 
+/* ALTE FUNKTION: function capitalizeWords(str) {
+  return str.replace(/\b\w/g, (l) => l.toUpperCase()); // Ersetzt den ersten Buchstaben jedes Wortes durch einen Großbuchstaben
+}*/
+
 // Funktion zur Großschreibung der ersten Buchstaben in einem String
 function capitalizeWords(str) {
-  return str.replace(/\b\w/g, (l) => l.toUpperCase()); // Ersetzt den ersten Buchstaben jedes Wortes durch einen Großbuchstaben
+  return str
+    .toLowerCase() // Optional: Alle Zeichen erstmal klein machen
+    .split(" ") // Zeichenkette nach Leerzeichen teilen
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
-
 // Funktion, um einen Event Listener für die Enter-Taste zu allen Eingabefeldern hinzuzufügen
 function addEnterKeyListenerToInputs() {
   // Array von IDs der Eingabefelder
