@@ -136,7 +136,9 @@ function displayResults(results) {
         cultivar["Cultivar Name"]
       )}'</td>
       <td data-label="Female Parent">${cultivar["Female Parent"]}</td>
-      <td data-label="Male Parent">${cultivar["Male Parent"]}</td>
+      <td data-label="Male Parent">${
+        cultivar["Male Parent"] !== null ? cultivar["Male Parent"] : "N/A"
+      }</td>
       <td data-label="Breeder">${capitalizeWords(cultivar["Breeder"])}</td>
       <td data-label="Year">${
         cultivar["Year"] !== null ? cultivar["Year"] : "N/A"
