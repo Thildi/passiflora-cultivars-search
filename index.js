@@ -71,7 +71,14 @@ function capitalizeWords(str) {
   return str
     .toLowerCase() // Optional: Alle Zeichen erstmal klein machen
     .split(" ") // Zeichenkette nach Leerzeichen teilen
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => {
+      // Sonderfall für "Mc"-Präfix
+      if (word.startsWith("mc")) {
+        return "Mc" + word.charAt(2).toUpperCase() + word.slice(3);
+      }
+      // Standardmäßige Großschreibung
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
     .join(" ");
 }
 // Funktion, um einen Event Listener für die Enter-Taste zu allen Eingabefeldern hinzuzufügen
